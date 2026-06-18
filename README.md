@@ -68,52 +68,52 @@ Stores the local ChromaDB vector database created by `ingest.py`.
 
 1. Create a Virtual Environment
 
-python -m venv venv
+  python -m venv venv
 
-venv\Scripts\activate
+  venv\Scripts\activate
 
 2. Install Dependencies
 
-pip install -r requirements.txt
+  pip install -r requirements.txt
 
 3. Create a .env File
 
-Create a .env file in the project root:
+  Create a .env file in the project root:
 
-GEMINI_API_KEY=your_gemini_api_key
+  GEMINI_API_KEY=your_gemini_api_key
 
 4. Download Bhagavad Gita Dataset
 
-python download_dataset.py
+  python download_dataset.py
 
-This creates:
+  This creates:
 
-data/bhagavad_gita.json
+  data/bhagavad_gita.json
 
 5. Create Vector Database
 
-Generate embeddings and store them in ChromaDB:
+  Generate embeddings and store them in ChromaDB:
 
-python ingest.py
+  python ingest.py
 
-This creates:
+  This creates:
 
-chroma_db/
+  chroma_db/
 
 6. Start FastAPI Backend
 
-uvicorn app:app --reload
+  uvicorn app:app --reload
 
-Backend runs at:
+  Backend runs at:
 
-http://127.0.0.1:8000
+  http://127.0.0.1:8000
 
 7. Run Streamlit Frontend
 
-Open a new terminal and run:
+  Open a new terminal and run:
 
-streamlit run streamlit_app.py
+  streamlit run streamlit_app.py
 
-Streamlit opens at:
+  Streamlit opens at:
 
-http://localhost:8501
+  http://localhost:8501
